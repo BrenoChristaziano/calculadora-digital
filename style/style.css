@@ -7,10 +7,11 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
 }
 header{
     margin-top: 25px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-align: center;
 }
 main{
@@ -37,12 +38,11 @@ main{
     width: 150px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
 }
 .btn{
     background-color: rgb(65, 121, 206);
-    padding: 10px;
     margin: 2px 8px ;
     height: 40px;
     width: 30px;

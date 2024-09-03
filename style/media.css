@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* larguras ds telas
+    celular 480
+    tablet 768
+    dekstop 992
+    tvs 1200    
+*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    header{
+        font-size: 1.4em;
+    }
+    main{
+        width: 300px;
+        height: 380px;
+    }
+    .caixa{
+        height: 120px;
+    }
+    #caixa{
+        height: 60px;
+        width: 250px;
+    }
+    .btn{
+        margin: 4px 10px ;
+        height: 50px;
+        width: 50px;
+        font-size: 1.5em
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    header{
+        font-size: 1.6em;
+    }
+    main{
+        width: 380px;
+        height: 480px;
+    }
+    .caixa{
+        height: 150px;
+    }
+    #caixa{
+        height: 80px;
+        width: 300px;
+    }
+    .btn{
+        margin: 6px 14px ;
+        height: 60px;
+        width: 60px;
+        font-size: 1.6em
+    }
+}
+@media screen and (min-width: 1200px) {
+    header{
+        font-size: 1.8em;
+    }
+    main{
+        width: 390px;
+        height: 530px;
+    }
+    .caixa{
+        height: 160px;
+    }
+    #caixa{
+        height: 70px;
+        width: 320px;
+        margin-bottom: 40px;
+    }
+    .btn{
+        margin: 7px 12px ;
+        height: 60px;
+        width: 70px;
+        font-size: 1.8em
+    }
+}
