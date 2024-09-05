@@ -8,10 +8,3 @@ const divisao = document.querySelector('#divisao')
 const virgula = document.querySelector('#virgula')
 const igual = document.querySelector('#igual')
 
-tela.addEventListener("click",(evt)=>{
-    botoes.map((el)=>{
-        let p = document.createElement('p')
-        p.innerHTML = el
-        tela.appendChild(p)
-    })
-})
