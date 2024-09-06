@@ -40,6 +40,9 @@ main{
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .dados{
     display: inline;
@@ -59,4 +62,9 @@ main{
 #igual{
     width: 80px;
 }
+
+.nat{
+   padding: 0px 2px;
+}
+
 

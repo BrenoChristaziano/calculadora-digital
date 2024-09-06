@@ -33,6 +33,9 @@
     #igual{
         width: 120px;
     }
+    .nat{
+        font-size: 1.2em;
+    }
     
 }
 @media screen and (min-width: 992px) and (max-width: 1200px){
@@ -61,6 +64,9 @@
     }
     #igual{
         width: 160px;
+    }
+    .nat{
+        font-size: 1.5em;
     }
     
 }
@@ -91,5 +97,8 @@
     }
     #igual{
         width: 160px;
+    }
+    .nat{
+        font-size: 1.8em;
     }
 }
