@@ -2,62 +2,65 @@ const tela = document.querySelector('#caixa')
 const cdn = document.querySelector('#caixadenumeros')
 let botoes = [...document.querySelectorAll('.numeros')]
 const clear = document.querySelector('#clear')
-const mais = document.querySelector('#mais')
-const vezes = document.querySelector('#vezes')
-const menos = document.querySelector('#menos')
-const divisao = document.querySelector('#divisao')
-const virgula = document.querySelector('#virgula')
-const igual = document.querySelector('#igual')
+let mais = document.querySelector('#mais')
+let vezes = document.querySelector('#vezes')
+let menos = document.querySelector('#menos')
+let divisao = document.querySelector('#divisao')
+let virgula = document.querySelector('#virgula')
+let igual = document.querySelector('#igual')
+
+// Função para criar e adicionar um novo elemento <p> ao contêiner 'tela'
+let novoElemento = (conteudo) => {
+    let p = document.createElement('p')
+    p.setAttribute('class', 'nat')
+    p.innerHTML = conteudo
+    tela.appendChild(p)
+}
 
 
+let nonovoElemento = (conteudo) => {
+    // Defina o comportamento específico aqui
+    novoElemento(conteudo)
+}
 
+// Adiciona o elemento <p> ao 'tela' quando um elemento com a classe 'numeros' é clicado
 cdn.addEventListener("click", (evt) => {
     if (evt.target && evt.target.classList.contains('numeros')) {
-        let p = document.createElement('p')
-        p.setAttribute('class', 'nat')
-        p.innerHTML = evt.target.innerHTML
-        tela.appendChild(p)
+        novoElemento(evt.target.innerHTML)
     }
 })
 
-mais.addEventListener("click",(evt)=>{
-    if (mais != mais.checkd){
-        let p = document.createElement('p')
-        p.setAttribute('class', 'nat')
-        p.innerHTML = evt.target.innerHTML
-        tela.appendChild(p)
-    }
-})
-vezes.addEventListener("click",(evt)=>{
-    if (vezes != vezes.checkd){
-        let p = document.createElement('p')
-        p.setAttribute('class', 'nat')
-        p.innerHTML = evt.target.innerHTML
-        tela.appendChild(p)
-    }
-})
-menos.addEventListener("click",(evt)=>{
-    if (menos != menos.checkd){
-        let p = document.createElement('p')
-        p.setAttribute('class', 'nat')
-        p.innerHTML = evt.target.innerHTML
-        tela.appendChild(p)
-    }
-})
-divisao.addEventListener("click",(evt)=>{
-    if (divisao != divisao.checkd){
-        let p = document.createElement('p')
-        p.setAttribute('class', 'nat')
-        p.innerHTML = evt.target.innerHTML
-        tela.appendChild(p)
-    }
-})
-virgula.addEventListener("click",(evt)=>{
-    if (virgula != virgula.checkd){
-        let p = document.createElement('p')
-        p.setAttribute('class', 'nat')
-        p.innerHTML = evt.target.innerHTML
-        tela.appendChild(p)
+// Adiciona o elemento <p> ao 'tela' quando o botão 'mais' é clicado
+mais.addEventListener("click", (evt) => {
+    if (evt.target === mais) {
+        novoElemento(evt.target.innerHTML)
     }
 })
 
+// Adiciona o elemento <p> ao 'tela' quando o botão 'vezes' é clicado
+vezes.addEventListener("click", (evt) => {
+    if (evt.target === vezes) {
+        novoElemento(evt.target.innerHTML)
+    }
+})
+
+// Adiciona o elemento <p> ao 'tela' quando o botão 'menos' é clicado
+menos.addEventListener("click", (evt) => {
+    if (evt.target === menos) {
+        novoElemento(evt.target.innerHTML)
+    }
+})
+
+// Adiciona o elemento <p> ao 'tela' quando o botão 'divisao' é clicado
+divisao.addEventListener("click", (evt) => {
+    if (evt.target === divisao) {
+        nonovoElemento(evt.target.innerHTML)
+    }
+})
+
+// Adiciona o elemento <p> ao 'tela' quando o botão 'virgula' é clicado
+virgula.addEventListener("click", (evt) => {
+    if (evt.target === virgula) {
+        nonovoElemento(evt.target.innerHTML)
+    }
+})
