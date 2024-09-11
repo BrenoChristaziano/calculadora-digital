@@ -20,6 +20,7 @@
     #caixa{
         height: 60px;
         width: 250px;
+        padding: 2px;
     }
     .btn{
         margin: 4px 10px ;
@@ -52,6 +53,7 @@
     #caixa{
         height: 80px;
         width: 300px;
+        padding: 2px;
     }
     .btn{
         margin: 6px 10px ;
@@ -85,6 +87,7 @@
         height: 70px;
         width: 320px;
         margin-bottom: 40px;
+        padding: 4px;
     }
     .btn{
         margin: 7px 12px ;

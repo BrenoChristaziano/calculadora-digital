@@ -19,48 +19,72 @@ let novoElemento = (conteudo) => {
 
 
 let nonovoElemento = (conteudo) => {
-    // Defina o comportamento específico aqui
     novoElemento(conteudo)
 }
 
-// Adiciona o elemento <p> ao 'tela' quando um elemento com a classe 'numeros' é clicado
 cdn.addEventListener("click", (evt) => {
     if (evt.target && evt.target.classList.contains('numeros')) {
         novoElemento(evt.target.innerHTML)
-    }
+    }   
 })
 
-// Adiciona o elemento <p> ao 'tela' quando o botão 'mais' é clicado
 mais.addEventListener("click", (evt) => {
     if (evt.target === mais) {
         novoElemento(evt.target.innerHTML)
     }
 })
 
-// Adiciona o elemento <p> ao 'tela' quando o botão 'vezes' é clicado
+
 vezes.addEventListener("click", (evt) => {
     if (evt.target === vezes) {
         novoElemento(evt.target.innerHTML)
     }
 })
 
-// Adiciona o elemento <p> ao 'tela' quando o botão 'menos' é clicado
 menos.addEventListener("click", (evt) => {
     if (evt.target === menos) {
         novoElemento(evt.target.innerHTML)
     }
 })
 
-// Adiciona o elemento <p> ao 'tela' quando o botão 'divisao' é clicado
 divisao.addEventListener("click", (evt) => {
     if (evt.target === divisao) {
         nonovoElemento(evt.target.innerHTML)
     }
 })
 
-// Adiciona o elemento <p> ao 'tela' quando o botão 'virgula' é clicado
 virgula.addEventListener("click", (evt) => {
     if (evt.target === virgula) {
         nonovoElemento(evt.target.innerHTML)
+    }
+})
+
+igual.addEventListener("click", (evt)=>{
+    const op = [
+        ()=>{
+            const soma = Number(botoes) + Number(botoes)
+            tela.appendChild(soma)
+        },
+        ()=>{
+            const multiplicação = Number(botoes) * Number(botoes)
+            igual.appendChild(multiplicação)
+        },
+        ()=>{
+            const menos = Number(botoes) - Number(botoes)
+            igual.appendChild(menos)
+        },
+        ()=>{
+            const divisão = Number(botoes) / Number(botoes)
+            igual.appendChild(divisao)
+        }
+    ]
+    if (mais == mais.check){
+        mais.addEventListener("click",op[0])
+    }else if (vezes === vezes.check){
+        vezes.addEventListener("click",op[1])
+    }else if (menos === menos.check){
+        menos.addEventListener("click",op[2])
+    }else if (divisao === divisao.check){
+        divisao.addEventListener("click",op[3])
     }
 })
