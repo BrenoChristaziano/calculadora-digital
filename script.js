@@ -25,7 +25,7 @@ let nonovoElemento = (conteudo) => {
 
 cdn.addEventListener("click", (evt) => {
     if (evt.target && evt.target.classList.contains('numeros')) {
-        novoElemento(evt.target.textContent); // Use textContent ao invés de innerHTML
+        novoElemento(evt.target.textContent)
     }
 });
 mais.addEventListener("click", (evt) => {
