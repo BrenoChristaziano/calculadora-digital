@@ -59,32 +59,39 @@ virgula.addEventListener("click", (evt) => {
     }
 })
 
-igual.addEventListener("click", (evt)=>{
-    const op = [
-        ()=>{
-            const soma = Number(botoes) + Number(botoes)
-            tela.appendChild(soma)
-        },
-        ()=>{
-            const multiplicação = Number(botoes) * Number(botoes)
-            igual.appendChild(multiplicação)
-        },
-        ()=>{
-            const menos = Number(botoes) - Number(botoes)
-            igual.appendChild(menos)
-        },
-        ()=>{
-            const divisão = Number(botoes) / Number(botoes)
-            igual.appendChild(divisao)
-        }
-    ]
-    if (mais == mais.check){
-        mais.addEventListener("click",op[0])
-    }else if (vezes === vezes.check){
-        vezes.addEventListener("click",op[1])
-    }else if (menos === menos.check){
-        menos.addEventListener("click",op[2])
-    }else if (divisao === divisao.check){
-        divisao.addEventListener("click",op[3])
+let operacao = null;
+
+mais.addEventListener("click", () => operacao = "soma");
+vezes.addEventListener("click", () => operacao = "multiplicacao");
+menos.addEventListener("click", () => operacao = "subtracao");
+divisao.addEventListener("click", () => operacao = "divisao");
+
+igual.addEventListener("click", () => {
+    if (botoes.length < 2) {
+        return
     }
-})
+    const num1 = Number(botoes[0].textContent);
+    const num2 = Number(botoes[1].textContent);
+
+    let resultado;
+
+    switch (operacao) {
+        case "soma":
+            resultado = num1 + num2;
+            break;
+        case "multiplicacao":
+            resultado = num1 * num2;
+            break;
+        case "subtracao":
+            resultado = num1 - num2;
+            break;
+        case "divisao":
+            resultado = num1 / num2;
+            break;
+        default:
+            resultado = "Erro";
+            break;
+    }
+
+    tela.textContent = resultado; // Atualiza a tela com o resultado
+});
