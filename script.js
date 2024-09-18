@@ -9,6 +9,10 @@ let divisao = document.querySelector('#divisao')
 let virgula = document.querySelector('#virgula')
 let igual = document.querySelector('#igual')
 
+
+let primeiroNumero = null
+let operacao = null
+
 let novoElemento = (conteudo) => {
     const p = document.createElement('p')
     p.setAttribute('class', 'nat')
@@ -19,23 +23,35 @@ let novoElemento = (conteudo) => {
 botoes.forEach((botao) => {
     botao.addEventListener("click", () => {
         const numero = botao.textContent
-        let elemento  = novoElemento(numero) 
-        tela.appendChild(elemento)          
+        tela.appendChild(novoElemento(numero))
+
+        // Se não houver uma operação, armazenar o primeiro número
+        if (operacao === null) {
+            primeiroNumero = Number(numero)
+        }
     })
 })
 
-mais.addEventListener("click", (evt)=>{
-        if (mais != mais.checked) {
-            let adiçao = mais.textContent
-            let novo = novoElemento(adiçao)
-            tela.appendChild(novo)
-        }
-})
-
-igual.addEventListener("click", (evt) =>{
-    const num = Number(botoes)
-    if (num == !isNaN(num)){
-        let soma = num = num
-        tela.appendChild(soma)
+mais.addEventListener("click", () => {
+    if (primeiroNumero !== null) {
+        operacao = "soma" // Definindo a operação como soma
+        tela.appendChild(novoElemento("+")) // Mostrando a operação na tela
     }
-})
+});
+
+igual.addEventListener("click", () => {
+    if (primeiroNumero !== null && operacao === "soma") {
+        // Pega o segundo número (último número inserido)
+        const numerosNaTela = [...tela.querySelectorAll('.nat')]
+        const segundoNumero = Number(numerosNaTela[numerosNaTela.length - 1].textContent)
+
+        // Realiza a soma
+        const resultado = primeiroNumero + segundoNumero
+        tela.value = ""
+        tela.appendChild(novoElemento(resultado))
+
+        // Reiniciar as variáveis para nova operação
+        primeiroNumero = null
+        operacao = null
+    }
+});
