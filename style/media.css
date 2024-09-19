@@ -27,16 +27,7 @@
         height: 40px;
         width: 50px;
         font-size: 1.5em
-    }
-    #clear{
-        width: 120px;
-    }
-    #igual{
-        width: 120px;
-    }
-    .nat{
-        font-size: 1.2em;
-    }    
+    }   
 }
 @media screen and (min-width: 992px) and (max-width: 1200px){
     header{
@@ -59,15 +50,6 @@
         height: 50px;
         width: 70px;
         font-size: 1.6em
-    }
-    #clear{
-        width: 160px;
-    }
-    #igual{
-        width: 160px;
-    }
-    .nat{
-        font-size: 1.5em;
     }
     
 }
@@ -93,14 +75,5 @@
         height:50px;
         width: 70px;
         font-size: 1.8em
-    }
-    #clear{
-        width: 160px;
-    }
-    #igual{
-        width: 160px;
-    }
-    .nat{
-        font-size: 1.8em;
     }
 }

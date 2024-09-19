@@ -6,6 +6,7 @@
     <title>Calculadora Digital</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/media.css">
+    
 </head>
 <body>
     <header>
@@ -13,33 +14,36 @@
         <p>Utilize para fazer diversos calculos</p>
     </header>
     <main>
-            <div class="tela">
-                <div id="caixa"></div>
+        <di class="tela">
+            <div id="caixa"></div>
+        </di>
+            <div id="Calculadora">
+                <div class="dados">
+                    <button class="btn" onclick="adicionar('7')">7</button>
+                    <button class="btn" onclick="adicionar('8')">8</button>
+                    <button class="btn" onclick="adicionar('9')">9</button>
+                    <button class="btn" onclick="adicionar('/')">/</button>
+                </div>
+                <div class="dados">
+                    <button class="btn" onclick="adicionar('4')">4</button>
+                    <button class="btn" onclick="adicionar('5')">5</button>
+                    <button class="btn" onclick="adicionar('6')">6</button>
+                    <button class="btn" onclick="adicionar('*')">*</button>
+                </div>
+                <div>
+                    <button class="btn" onclick="adicionar('1')">1</button>
+                    <button class="btn" onclick="adicionar('2')">2</button>
+                    <button class="btn" onclick="adicionar('3')">3</button>
+                    <button class="btn" onclick="adicionar('-')">-</button>
+                </div>
+                <div class="dados">
+                    <button class="btn" onclick="adicionar('0')">0</button>
+                    <button class="btn" onclick="calcular('')">=</button>
+                    <button class="btn" onclick="limpar('')">C</button>
+                    <button class="btn" onclick="adicionar('+')">+</button>
+                </div>
             </div>
-                <div class="dados">
-                    <button class="btn" id="clear">C</button>
-                    <button class="btn" id="mais">+</button>
-                    <button class="btn" id="vezes">x</button>
-                    <button class="btn" id="menos">-</button>
-                    <button class="btn" id="divisao">÷</button>
-                    <button class="btn" id="virgula">.</button>
-                </div>
-                <div class="dados" id="caixadenumeros">
-                    <button class="btn numeros">1</button>
-                    <button class="btn numeros">2</button>
-                    <button class="btn numeros">3</button>
-                    <button class="btn numeros">4</button>
-                    <button class="btn numeros">5</button>
-                    <button class="btn numeros">6</button>
-                    <button class="btn numeros">7</button>
-                    <button class="btn numeros">8</button>
-                    <button class="btn numeros">9</button>
-                    <button class="btn numeros">0</button>
-                </div>
-                <div class="dados">
-                    <button class="btn" id="igual">=</button>
-                </div>
     </main>
     <script src="script.js"></script>
 </body>
-</html>
+</htbutton
