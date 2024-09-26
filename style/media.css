@@ -17,10 +17,11 @@
     .tela{
         height: 120px;
     }
-    #caixa{
+    .caixa{
         height: 60px;
         width: 250px;
-        padding: 2px;
+        padding: 3px;
+        font-size: 1.2em;
     }
     .btn{
         margin: 4px 10px ;
@@ -40,10 +41,11 @@
     .tela{
         height: 150px;
     }
-    #caixa{
+    .caixa{
         height: 80px;
         width: 300px;
-        padding: 2px;
+        padding: 10px;
+        font-size: 1.5em;
     }
     .btn{
         margin: 6px 10px ;
@@ -64,11 +66,12 @@
     .tela{
         height: 160px;
     }
-    #caixa{
+    .caixa{
         height: 70px;
         width: 320px;
         margin-bottom: 40px;
-        padding: 4px;
+        padding: 10px;
+        font-size: 1.8em;
     }
     .btn{
         margin: 7px 12px ;

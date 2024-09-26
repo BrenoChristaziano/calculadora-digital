@@ -33,7 +33,7 @@ main{
     align-items: center;
     
 }
-#caixa{
+.caixa{
     height: 40px;
     width: 150px;
     border: 1px solid black;
