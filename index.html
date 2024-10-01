@@ -15,7 +15,7 @@
     </header>
     <main>
         <di class="tela">
-             <input class="caixa" type="text" id="display" disabled>
+             <input class="caixa" type="text" id="caixa" disabled>
         </di>
             <div id="Calculadora">
                 <div class="dados">
@@ -38,8 +38,8 @@
                 </div>
                 <div class="dados">
                     <button class="btn" onclick="appendToDisplay('0')">0</button>
-                    <button class="btn" onclick="calculateResult()">=</button>
-                    <button class="btn" onclick="clearDisplay()">C</button>
+                    <button class="btn" id="igual" onclick="calculateResult()">=</button>
+                    <button class="btn" onclick="clearDisplay()">Ce</button>
                     <button class="btn" onclick="appendToDisplay('+')">+</button>
                 </div>
             </div>

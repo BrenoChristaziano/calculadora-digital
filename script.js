@@ -1,22 +1,33 @@
-let display = document.getElementById('display')
+let tela= document.getElementById('caixa')
 
 function appendToDisplay(value) {
-    display.value += value
+    tela.value += value
 }
 
+let verificação_click = false
+const resultado = document.querySelector("#igual")
 function clearDisplay() {
-    display.value = ''
+    if(verificação_click) { //Verifica se o botão foi clicado
+        resultado.innerHTML = "Ac"
+        tela.value = ''
+        verificação_click = false
+    }else{
+        tela.value = tela.value.slice(0,-1)
+    }
 }
-
+resultado.addEventListener("click", () => {
+    isEqualButtonClicked = true // Marca que o botão foi clicado
+    clearDisplay() // Chama a função para limpar ou calcular
+})
 function calculateResult() {
-    const expression = display.value
+    const expression = tela.value
     let result
 
     try {
         result = calculate(expression)
-        display.value = result
+        tela.value = result
     } catch (error) {
-        display.value = 'Erro'
+        tela.value = 'Erro'
     }
 }
 
