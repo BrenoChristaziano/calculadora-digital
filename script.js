@@ -1,36 +1,25 @@
 let tela= document.getElementById('caixa')
-
+// os botões para serem clicados
 function appendToDisplay(value) {
     tela.value += value
 }
-
-let verificação_click = false
-const resultado = document.querySelector("#igual")
+//Apagar m numero
 function clearDisplay() {
-    if(verificação_click) { //Verifica se o botão foi clicado
-        resultado.innerHTML = "Ac"
-        tela.value = ''
-        verificação_click = false
-    }else{
-        tela.value = tela.value.slice(0,-1)
-    }
+    tela.value = tela.value.slice(0, -1)
 }
-resultado.addEventListener("click", () => {
-    isEqualButtonClicked = true // Marca que o botão foi clicado
-    clearDisplay() // Chama a função para limpar ou calcular
-})
+//Calcular um numero
 function calculateResult() {
     const expression = tela.value
     let result
 
     try {
         result = calculate(expression)
-        tela.value = result
+        tela.value = result    
     } catch (error) {
         tela.value = 'Erro'
     }
 }
-
+//As oprações Matmaticas
 function calculate(expression) {
     const numbers = expression.split(/[\+\-\*\/]/).map(Number)
     const operators = expression.split(/[0-9]+/).filter(Boolean)
