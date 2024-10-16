@@ -1,3 +1,5 @@
+let clicado = false
+
 let tela= document.getElementById('caixa')
 // os botões para serem clicados
 function appendToDisplay(value) {
@@ -5,7 +7,12 @@ function appendToDisplay(value) {
 }
 //Apagar m numero
 function clearDisplay() {
-    tela.value = tela.value.slice(0, -1)
+    if(clicado == true){
+        tela.value = ''
+        clicado = false
+    }else{
+        tela.value = tela.value.slice(0, -1)
+    }
 }
 //Calcular um numero
 function calculateResult() {
@@ -21,6 +28,7 @@ function calculateResult() {
 }
 //As oprações Matmaticas
 function calculate(expression) {
+    clicado = true
     const numbers = expression.split(/[\+\-\*\/]/).map(Number)
     const operators = expression.split(/[0-9]+/).filter(Boolean)
 
