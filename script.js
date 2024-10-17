@@ -1,11 +1,21 @@
+const operadores = document.querySelectorAll('.op')
+
 let clicado = false
+let sinal = false
 
 let tela= document.getElementById('caixa')
 // os botões para serem clicados
 function appendToDisplay(value) {
     tela.value += value
 }
-//Apagar m numero
+operadores.forEach((el)=>{
+    el.addEventListener("click",(evt)=>{
+        if(!sinal){
+            sinal = true
+        }
+    })
+})
+//Apagar o numero
 function clearDisplay() {
     if(clicado == true){
         tela.value = ''
